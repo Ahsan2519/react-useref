@@ -1,10 +1,12 @@
 import '../assets/App.css';
+import Ref from './Ref';
+import Timer from './Timer';
 
-function App() {
+const  App = ()=> {
   return (
     <div className="App">
-      
-      hi
+      <Ref/>
+      <Timer />
     </div>
   );
 }
