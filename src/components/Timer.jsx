@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { memo, useEffect, useRef, useState } from "react";
 
 const Timer = () => {
   const [timer, setTimer] = useState(0);
   const intervalRef = useRef();
+  console.log('timer-components')
   useEffect(() => {
     intervalRef.current = setInterval(() => {
       setTimer((prev) => prev + 1);
@@ -21,4 +22,4 @@ const Timer = () => {
   );
 };
 
-export default Timer;
+export default memo(Timer) ;

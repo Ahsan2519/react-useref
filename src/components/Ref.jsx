@@ -1,18 +1,19 @@
-import React , {useEffect, useRef} from 'react'
+import React, { useEffect, useRef } from "react";
 
-const Ref = ()=> {
-    const inputRef = useRef(null);
-   
-    useEffect(()=>{
-        inputRef.current.focus()
-    },[])
+const Ref = ({ clickHandler }) => {
+  const inputRef = useRef(null);
+  console.log("ref-components");
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
   return (
     <>
       <div>
-        <input type="text"  ref = {inputRef} />
+        <input type="text" ref={inputRef} />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Ref
+export default Ref;
